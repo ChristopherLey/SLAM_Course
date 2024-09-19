@@ -1,0 +1,13 @@
+*/.pytest_cache/
+*/__pycache__/
+*/.mypy_cache/
+*/.tox/
+*/.vscode/
+*/.idea/
+*/.venv/
+*/.vs/
+*/.mypy_cache/
+*/.pytest_cache/
+*/.coverage
+.pytest_cache/
+.idea/
