@@ -89,9 +89,10 @@ sigma = np.block([[robot_sigma, robot_map_sigma], [robot_map_sigma.T, map_sigma]
 # Q = np.eye(2) * 0.01
 observed_landmarks = np.zeros(N, dtype=bool)
 
-fig, ax = plt.subplots()
+fig, ax = plt.subplots(figsize=(6, 6))
 plt.setp(ax, xlim=(-2, 12), ylim=(-2, 12), aspect=1)
 plt.ion()
+plt.tight_layout()
 plt.show()
 
 
@@ -127,5 +128,4 @@ for data in sensor_data:
                     z_observed_x = mu[0] + r * np.cos(mu[2] + phi)
                     z_observed_y = mu[1] + r * np.sin(mu[2] + phi)
                     ax.plot([mu[0].item(), z_observed_x.item()], [mu[1].item(), z_observed_y.item()], 'b', alpha=0.1)
-
     plt.pause(0.1)
